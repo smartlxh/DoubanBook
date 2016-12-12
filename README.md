@@ -9,11 +9,28 @@
 	cd IPProxys
 	python IPProxys.py
 
-#### 运行spring-boot服务
+
+#### 运行豆瓣爬虫爬取信息(注意在db.properties中配置数据库信息)
+	
+	cd doubanSpider
+	scrapy crawl douban
+	
+#### 运行spring-boot服务(注意在db.properties中配置数据库信息)
+
 	
 	cd DoubanRestful
 	cd target
 	java -jar gs-rest-service-0.1.0.jar
+
+#### 接口API
+ http://127.0.0.1/author?name=value
+ http://127.0.0.1/book?name=value
+ http://127.0.0.1/country?name=value
+ 分别为按照作者、书名和国家查询。返回json格式
+ 例如
+ 		
+ 		http://127.0.0.1:8080/greeting?name=%E5%B0%8F%E7%8E%8B%E5%AD%90
+ ![](http://i1.piimg.com/567571/7b181d03a023d5d4.png)
 	
 	
 
